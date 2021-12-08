@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "multiply_deps": {
+      "main": "src/multiply_deps/main.mo",
+      "type": "motoko"
+    },
+    "multiply_deps_assets": {
+      "dependencies": [
+        "multiply_deps"
+      ],
+      "frontend": {
+        "entrypoint": "src/multiply_deps_assets/src/index.html"
+      },
+      "source": [
+        "src/multiply_deps_assets/assets",
+        "dist/multiply_deps_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
