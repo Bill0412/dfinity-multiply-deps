@@ -4,19 +4,15 @@
       "main": "src/multiply_deps/main.mo",
       "type": "motoko"
     },
-    "multiply_deps_assets": {
+    "rust_deps": {
+      "build": "cargo build --target wasm32-unknown-unknown --package rust_deps --release",
+      "candid": "src/rust_deps/src/deps.did",
+      "wasm": "target/wasm32-unknown-unknown/release/rust_deps.wasm",
+      "type": "custom",
       "dependencies": [
         "multiply_deps"
-      ],
-      "frontend": {
-        "entrypoint": "src/multiply_deps_assets/src/index.html"
-      },
-      "source": [
-        "src/multiply_deps_assets/assets",
-        "dist/multiply_deps_assets/"
-      ],
-      "type": "assets"
-    }
+      ]
+      }
   },
   "defaults": {
     "build": {
